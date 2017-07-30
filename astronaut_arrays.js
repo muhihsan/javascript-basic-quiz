@@ -19,9 +19,8 @@ var moonWalkers = [
 ];
 
 function alphabetizer(names) {
-  var renamedMoonWalkers = [];
-  moonWalkers.forEach(function(walker) {
-    renamedMoonWalkers.push(rename(walker));
+  var renamedMoonWalkers = moonWalkers.map(function(walker) {
+    return rename(walker);
   });
   return renamedMoonWalkers.sort();
 }
